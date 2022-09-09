@@ -40,6 +40,7 @@
                       </thead>
                       <tbody>
                       <?php 
+                         //echo mayomi editando
                         $consul="SELECT tb_almacen.id_almacen,
                         tb_almacen.id_producto,tb_almacen.fecha,tb_almacen.seccion,
                         tb_producto.producto,

@@ -13,7 +13,7 @@
 
     <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh">
         <form style="background-color:azure" class="border shadow p-5 rounded-2" style="width: 500px;" action="../php/validar.php" method="post">
-            
+           
             <h2 class="text-center pt-2">INICIAR SESION</h2>
             <hr>
             <div class="mb-3">
