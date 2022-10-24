@@ -25,7 +25,7 @@
                 <input type="password" class="form-control" id="contrase" placeholder="Ingresar contraseña" name="contrase">
             </div>
 
-            <button type="submit" class="btn btn-primary"><b>INGRESAR</b></button>            
+            <button type="submit" class="btn btn-primary"><b>INGRESAR-eee</b></button>            
         </form>
     </div>
     
