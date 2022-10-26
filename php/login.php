@@ -17,7 +17,7 @@
             <h2 class="text-center pt-2">INICIAR SESION</h2>
             <hr>
             <div class="mb-3">
-                <label for="usuar" class="form-label"><b>Usuario:</b></label>
+                <label for="usuar" class="form-label"><b>Usuario usr1</b></label>
                 <input type="text" class="form-control" id="usuario" placeholder="Ingresar usuario" name="usuario">
             </div>
             <div class="mb-3">
