@@ -1,4 +1,4 @@
-<?php include ("../includes/heater.php");?>
+<?php include ("../vistas/plantillas/heater.php");?>
 <?php include("../Conexion/conexion.php")?>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet" />
 
@@ -273,4 +273,4 @@
   </div>
 </div>
 
-<?php include ("../includes/footer.php");?>
+<?php include ("../vistas/platillas/footer.php");?>

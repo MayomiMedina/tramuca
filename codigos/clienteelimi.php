@@ -11,7 +11,7 @@ $resul2=mysqli_query($conexion,$consul2);
 if($resul2){
     ?>
     <?php     
-    include("../php/cliente.php");
+    include("../vistas/modulos/cliente.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  
@@ -21,7 +21,7 @@ if($resul2){
 }else{
     ?>
     <?php     
-    include("../php/cliente.php");
+    include("../vistas/modulos/cliente.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  

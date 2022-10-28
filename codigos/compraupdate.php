@@ -31,7 +31,7 @@ $resul3=mysqli_query($conexion,$consul3);
 if($resul2){
     ?>
     <?php     
-    include("../php/compras.php");
+    include("../vistas/modulos/compras.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  
@@ -41,7 +41,7 @@ if($resul2){
 }else{
     ?>
     <?php     
-    include("../php/compras.php");
+    include("../vistas/modulos/compras.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  

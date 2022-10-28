@@ -12,7 +12,7 @@
         <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
 
 </body>
-        <script src="../js/scripts.js" crossorigin="anonymous"></script>
-        <script src="../js/Chart.min.js"></script>
-        <script src="../js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="../vistas/js/scripts.js" crossorigin="anonymous"></script>
+        <script src="../vistas/js/Chart.min.js"></script>
+        <script src="../vistas/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </html>

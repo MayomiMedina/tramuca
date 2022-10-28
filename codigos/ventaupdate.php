@@ -23,7 +23,7 @@ $y=$r-$can;
 if($y<0){
   ?>
   <?php     
-  include("../php/ventas.php");
+  include("../vistas/modulos/ventas.php");
   ?>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script>  
@@ -43,7 +43,7 @@ $resul3=mysqli_query($conexion,$consul3);
   if($resul4){
     ?>
     <?php     
-    include("../php/ventas.php");
+    include("../vistas/modulos/ventas.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  
@@ -53,7 +53,7 @@ $resul3=mysqli_query($conexion,$consul3);
     }else{
     ?>
     <?php     
-    include("../php/ventas.php");
+    include("../vistas/modulos/ventas.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  

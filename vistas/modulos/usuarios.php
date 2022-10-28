@@ -1,5 +1,5 @@
 <?php include("../Conexion/conexion.php")?>
-<link href="../build/bootstrap5/css/bootstrap.min.css" rel="stylesheet" />
+<link href="../vistas/bootstrap5/css/bootstrap.min.css" rel="stylesheet" />
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -19,7 +19,7 @@
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalusuar"><b> Registrar Usuario</b></button>
                     
                   
-                        <a class="btn btn-success" href="../php/login.php" ><b>Regresar</b></a> 
+                        <a class="btn btn-success" href="../vistas/modulos/login.php" ><b>Regresar</b></a> 
                     </div>
             <p></p>
             <table class="table table-striped table-bordered">

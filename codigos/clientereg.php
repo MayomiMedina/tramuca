@@ -15,7 +15,7 @@ $resul2=mysqli_query($conexion,$verifiDNI);
 if(mysqli_num_rows($resul2)>0){
    echo'<script>
    alert("Ya se registro ese DNI");
-   window.location="../php/cliente.php";
+   window.location="../vistas/cliente.php";
    </script>';
     exit();
 }
@@ -25,7 +25,7 @@ $resul=mysqli_query($conexion,$consul);
 if($resul){
     ?>
     <?php     
-    include("../php/cliente.php");
+    include("../vistas/modulos/cliente.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  
@@ -35,7 +35,7 @@ if($resul){
 }else{
     ?>
     <?php     
-    include("../php/cliente.php");
+    include("../modulos/vistas/cliente.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  

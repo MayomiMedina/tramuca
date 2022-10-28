@@ -22,7 +22,7 @@ $r=$row['cantidad']+$row2['stock'];
   if($resul4){
     ?>
     <?php     
-    include("../php/ventas.php");
+    include("../vistas/modulos/ventas.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  
@@ -32,7 +32,7 @@ $r=$row['cantidad']+$row2['stock'];
     }else{
     ?>
     <?php     
-    include("../php/ventas.php");
+    include("../vistas/modulos/ventas.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  

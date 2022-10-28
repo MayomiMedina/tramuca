@@ -10,7 +10,7 @@ $resul=mysqli_query($conexion,$consul);
 if($resul){
         ?>
         <?php     
-        include("../php/usuarios.php");
+        include("../vistas/modulos/usuarios.php");
         ?>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script>  
@@ -20,7 +20,7 @@ if($resul){
 }else{ 
     ?>
     <?php     
-    include("../php/usuarios.php");
+    include("../vistas/modulos/usuarios.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  

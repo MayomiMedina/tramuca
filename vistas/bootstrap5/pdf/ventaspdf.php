@@ -126,7 +126,7 @@ ob_start();
 <?php 
 $html=ob_get_clean();
 
-require_once '../build/dompdf/autoload.inc.php';
+require_once '../vistas/librerias/autoload.inc.php';
 use Dompdf\Dompdf;
 $dompdf=new Dompdf();
 

@@ -1,4 +1,4 @@
-<?php include ("../includes/heater.php");?>
+<?php include ("../vistas/plantillas/heater.php");?>
 <?php include("../Conexion/conexion.php")?>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet" />
 
@@ -14,69 +14,66 @@
             <div class="col-md-12 col-lg-12 col-sm-12 px-4 ">
                 <div class="row">
 
-                <?php
-                        $busqueda = $_REQUEST['busqueda'];
-                        if(empty($busqueda))
-                        {
-                            header("location: buscar.productos.php");
-                        }
-                    
-                    ?>
-
                     <div class="col-md-4 d-grid gap-1 pt-1">
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalproducto"> Registrar Producto</button>
 
                     </div>
 
                     <div class="col-md-4 d-grid gap-1 pt-1">
-                        <a  class="btn btn-success"> Exportar XSV </a>
+                        <a  class="btn btn-success" href="../Excel/excelproducto.php"> Exportar XSV </a>
                     </div>
 
                     <div class="col-md-4 d-grid gap-1 pt-1">
-                        <span class="btn btn-info "> Imprimir</span>
+                        <span class="btn btn-info " onclick="window.print()"> Imprimir</span>
                     </div>
 
                     <hr>
-                    <div>
-                    <form  action="buscar_productos.php" class="btn_new" class="form_search">
-                    <input type="text" class="form-control" name="busqueda" id="busqueda" required placeholder="Código" value="<?php echo $busqueda; ?>">
+                    <!-- <div>
+                    <form  action="../buscar/buscar_productos.php" class="btn_new" class="form_search">
+                    <input type="text" class="form-control" name="busqueda" id="busqueda" required placeholder="Código" >
                     <hr>
                     <center>
                     <input type="submit" value="Buscar producto" class="btn btn-outline-success btn_search">
                     </center>
-                    </form>
-                    </div>
+                    </form>                    
+                    </div> -->
 
-
-                    <p></p>
-                    <table class="table table-striped table-bordered">
+                    <p></p>                  
+                    <table class="table table-striped table-bordered" id="tablapro">
                       <thead class="thead-dark">
                       <tr class="table-bordered">                        
                         <th>Producto</th>
                         <th>Codigo</th>
-                        <th>Stock</th>
                         <th>Categoria</th>
-                        <th>Marca</th>
+                        <th>Marca</th>                        
+
                       </tr>
                       </thead>
                       <tbody>
                       <?php 
-                        $consul="SELECT * from tb_producto WHERE codigo='$busqueda'";
+                        $consul="select 
+                        tb_producto.id_producto,
+                        tb_producto.producto,
+                          tb_producto.codigo,
+                          tb_producto.categoria,
+                          tb_producto.marca                         
+                         from tb_producto
+                         LEFT JOIN tb_compra on tb_compra.id_producto=tb_producto.id_producto
+                         GROUP BY tb_producto.producto,tb_producto.id_producto";
                         $resul=mysqli_query($conexion,$consul);
                         while($row=mysqli_fetch_assoc($resul)){
                         ?>
                         <tr>
                             <td><?php echo $row['producto'];?></td>
                             <td><?php echo $row['codigo'];?></td>
-                            <td><?php echo $row['stock'];?></td>  
                             <td><?php echo $row['categoria'];?></td>
-                            <td><?php echo $row['marca'];?></td>
+                            <td><?php echo $row['marca'];?></td>                          
+                           
                             <td><button type="button" class="btn" data-bs-toggle="modal" 
                             data-bs-target="#modalproductosupdate"
                                  data-bs-id="<?php echo $row['id_producto'];?>"
                                  data-bs-pro="<?php echo $row['producto'];?>"
-                                 data-bs-cod="<?php echo $row['codigo'];?>"
-                                 data-bs-sto="<?php echo $row['stock'];?>"
+                                 data-bs-cod="<?php echo $row['codigo'];?>"                                 
                                  data-bs-cat="<?php echo $row['categoria'];?>"
                                  data-bs-mar="<?php echo $row['marca'];?>"
                                  >
@@ -99,6 +96,7 @@
               
                 
                 </div>
+
             </div>
           </div>
         </div>
@@ -106,6 +104,10 @@
     </div>    
 </div>
 
+<script>
+var tabla=document.querySelector("#tablapro");
+var datatable=new DataTable(tabla);
+</script>
 
 <div class="modal fade" id="eliminarproduc" tabindex="-1" aria-labelledby="exampleModalLabelUp" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -119,7 +121,7 @@
               <input type="hidden" class="form-control" id="idproductos" name="idproductos">
               
             <div class="modal-footer">
-                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                  <input type="submit" class="btn btn-primary" value="Eliminar">
             </div>
             
@@ -145,30 +147,30 @@
         <form method="POST" action="../codigos/producupdate.php">
           
             <input type="hidden" class="form-control" id="idproducto" name="idproducto">
+          <div class="row">
+            <div class="col-xs-6 col-sm-3 col-md-6 form-group">
+              <label for="recipient-name" class="col-form-label">Nombre del producto:</label>
+              <input type="text" class="form-control" id="NomU" name="NomU" >
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3 form-group">
+              <label for="recipient-name" class="col-form-label">Código:</label>
+              <input type="text" class="form-control" id="cod" name="cod">
+            </div>                      
+          </div>
 
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Nombre del producto:</label>
-            <input type="text" class="form-control" id="NomU" name="NomU" >
-          </div>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Codigo:</label>
-            <input type="text" class="form-control" id="cod" name="cod">
-          </div>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Stock:</label>
-            <input type="text" class="form-control" id="sto" name="sto">
-          </div>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Categoria:</label>
-            <input type="text" class="form-control" id="cat" name="cat">
-          </div>
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Marca:</label>
-            <input type="text" class="form-control" id="mar" name="mar">
+          <div class="row">
+            <div class="col-xs-6 col-sm-3 col-md-6 form-group">
+              <label for="recipient-name" class="col-form-label">Categoría:</label>
+              <input type="text" class="form-control" id="cat" name="cat">
+            </div>
+            <div class="mb-3 col-xs-6 col-sm-3 col-md-6 form-group">
+              <label for="recipient-name" class="col-form-label">Marca:</label>
+              <input type="text" class="form-control" id="mar" name="mar">
+            </div>
           </div>
 
           <div class="modal-footer">
-                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                  <input type="submit" class="btn btn-primary" value="Actualizar">
             </div>
             
@@ -191,24 +193,21 @@
       // Extract info from data-bs-* attributes
       var recipient = button.getAttribute('data-bs-id')
       var pro = button.getAttribute('data-bs-pro')
-      var cod = button.getAttribute('data-bs-cod')
-      var sto = button.getAttribute('data-bs-sto')
+      var cod = button.getAttribute('data-bs-cod')      
       var cat = button.getAttribute('data-bs-cat')
       var mar = button.getAttribute('data-bs-mar')
 
 
       var modalBodyInput = exampleModal.querySelector('#idproducto')
       var codigo = exampleModal.querySelector('#cod')
-      var nombre = exampleModal.querySelector('#NomU')
-      var stock=exampleModal.querySelector('#sto')
+      var nombre = exampleModal.querySelector('#NomU')    
       var cate = exampleModal.querySelector('#cat')
       var marc = exampleModal.querySelector('#mar')
 
 
       modalBodyInput.value = recipient;
       nombre.value=pro;
-      codigo.value=cod;
-      stock.value=sto;
+      codigo.value=cod;      
       cate.value=cat;
       marc.value=mar;
 
@@ -242,32 +241,29 @@
       </div>
       <div class="modal-body">
         <form method="POST" action="../codigos/producreg.php">
-
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Codigo:</label>
+        <div class="row">
+          <div class="mb-3 col-xs-6 col-sm-3 col-md-6 form-group">
+            <label for="recipient-name" class="col-form-label">Código:</label>
             <input type="text" class="form-control" id="cod" name="cod">
           </div>
-          <div class="mb-3">
+          <div class="mb-3 col-xs-6 col-sm-3 col-md-6 form-group">
             <label for="recipient-name" class="col-form-label">Nombre del producto:</label>
             <input type="text" class="form-control" id="nomb" name="nomb">
           </div>
-         
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Stock:</label>
-            <input type="text" class="form-control" id="stoc" name="stoc">
-          </div>
+        </div>        
       
-          <div class="mb-3">
-            <label for="recipient-name" class="col-form-label">Categoria:</label>
+          <div class="mb-3 col-xs-6 col-sm-3 col-md-6 form-group">
+            <label for="recipient-name" class="col-form-label">Categoría:</label>
             <input type="text" class="form-control" id="cat" name="cat">
           </div>
-          <div class="mb-3">
+        </div>
+          <div class="mb-3 col-xs-6 col-sm-3 col-md-6 form-group">
             <label for="recipient-name" class="col-form-label">Marca:</label>
             <input type="text" class="form-control" id="mar" name="mar">
           </div>
 
           <div class="modal-footer">
-                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                  <input type="submit" class="btn btn-primary" value="Registrar">
             </div>
             
@@ -284,4 +280,4 @@
 
 
 
-<?php include ("../includes/footer.php");?>
+<?php include ("../vistas/plantillas/footer.php");?>

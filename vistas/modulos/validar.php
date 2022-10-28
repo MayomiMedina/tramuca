@@ -25,12 +25,12 @@ if(!$user || !$contra){
 }
 else if($row ){
     if($row['idcargo']==1 && $row['estado']=='Activo'){
-           header("Location:../php/usuarios.php");            
+           header("Location:../vistas/modulos/usuarios.php");            
     }else if($row['idcargo']==3 && $row['estado']=='Activo'){
-    header("Location:../php/index.php");
+    header("Location:../vistas/modulos/cliente.php");
     }
     else{   
-        header("Location:../php/login.php");    
+        header("Location:../vistas/modulos/login.php");    
     }
 }else{
     ?>

@@ -25,7 +25,7 @@ if($row1['nombre']==$row2['nombre']&&$row1['apellidos']==$row2['apellidos']&&$ro
 &&$row1['contra']==$row2['contra']&&$row1['area']==$row2['area']&&$row1['estado']==$row2['estado']&&$row1['idcargo']==$row2['idcargo']){
     ?>
     <?php     
-    include("../php/usuarios.php");
+    include("../vistas/modulos/usuarios.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  
@@ -35,7 +35,7 @@ if($row1['nombre']==$row2['nombre']&&$row1['apellidos']==$row2['apellidos']&&$ro
 }else{
     ?>
     <?php     
-    include("../php/usuarios.php");
+    include("../vistas/modulos/usuarios.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  

@@ -11,7 +11,7 @@ $consul="UPDATE tb_almacen set id_producto='$produc',fecha='$fecha',seccion='$se
 $resul=mysqli_query($conexion,$consul);
 
 if($resul){
-    return header("Location:../php/almacen.php");
+    return header("Location:../vistas/modulos/almacen.php");
 }else{
     echo 'error';
 }

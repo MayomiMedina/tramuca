@@ -18,7 +18,7 @@ $r=$row['stock']-$can;
 if($r<0){
   ?>
   <?php     
-  include("../php/ventas.php");
+  include("../vistas/modulos/ventas.php");
   ?>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script>  
@@ -34,7 +34,7 @@ if($r<0){
   if($resul3){
     ?>
     <?php     
-    include("../php/ventas.php");
+    include("../vistas/modulos/ventas.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  
@@ -44,7 +44,7 @@ if($r<0){
     }else{
     ?>
     <?php     
-    include("../php/ventas.php");
+    include("../vistas/modulos/ventas.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  

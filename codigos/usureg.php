@@ -11,7 +11,7 @@ $cargo=$_POST['car'];
 if($_POST['nom']==""){
     ?>
     <?php     
-    include("../php/usuarios.php");
+    include("../vistas/modulos/usuarios.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script>  
@@ -28,7 +28,7 @@ if($_POST['nom']==""){
     if($resul){
         ?>
         <?php     
-        include("../php/usuarios.php");
+        include("../vistas/modulos/usuarios.php");
         ?>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <script>  

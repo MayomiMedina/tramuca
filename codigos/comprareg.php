@@ -25,7 +25,7 @@ $resul3=mysqli_query($conexion,$consul3);
 if($resul3){
   ?>
   <?php     
-  include("../php/compras.php");
+  include("../vistas/modulos/compras.php");
   ?>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script>  
@@ -35,7 +35,7 @@ if($resul3){
 }else{
   ?>
   <?php     
-  include("../php/compras.php");
+  include("../vistas/modulos/compras.php");
   ?>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script>  

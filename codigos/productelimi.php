@@ -10,7 +10,7 @@ $resul=mysqli_query($conexion,$consul);
 if($resul){
     ?>
     <?php     
-    include("../php/productos.php");
+    include("../vistas/modulos/productos.php");
     // return header("Location:../php/productos.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -22,7 +22,7 @@ if($resul){
 }else{
     ?>
     <?php     
-    include("../php/productos.php");
+    include("../vistas/modulos/productos.php");
     // return header("Location:../php/productos.php");
     ?>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

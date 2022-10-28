@@ -11,7 +11,7 @@ values('$produc','$fecha','$secc') ";
 $resul=mysqli_query($conexion,$consul);
 
 if($resul){
-    return header("Location:../php/almacen.php");
+    return header("Location:../vistas/modulos/almacen.php");
 }else{
     echo 'error';
 }

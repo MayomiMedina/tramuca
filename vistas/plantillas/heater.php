@@ -18,8 +18,8 @@
         
         <script src="https://kit.fontawesome.com/2dc4d683dc.js" crossorigin="anonymous"></script>
 
-        <link href="../build/bootstrap5/css/styles.css" rel="stylesheet" />
-        <link href="../build/bootstrap5/css/bootstrap.css" rel="stylesheet" />    
+        <link href="../vistas/bootstrap5/css/styles.css" rel="stylesheet" />
+        <link href="../vistas/bootstrap5/css/bootstrap.css" rel="stylesheet" />    
 
        
         <!-- date-->
@@ -34,7 +34,7 @@
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="../php/index.php">TRAMUCA</a>
+            <a class="navbar-brand ps-3" href="../index.php">TRAMUCA</a>
             <!--<input type="submit" id="btninventario" class="navbar-brand ps-3" value="Inventario" style="color:dimgray">-->
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
@@ -50,7 +50,7 @@
                         
                         <li><a class="dropdown-item" href="#!">Detalles</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="../php/login.php">Cerrar sesión</a></li>
+                        <li><a class="dropdown-item" href="../vistas/modulos/login.php">Cerrar sesión</a></li>
                     </ul>
                 </li>
             </ul>
@@ -65,27 +65,27 @@
                             
                             <div class="sb-sidenav-menu-heading">Menu</div>
 
-                            <a class="nav-link" href="../php/cliente.php">
+                            <a class="nav-link" href="../vistas/modulos/cliente.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-bag-shopping"></i></div>
                                 Clientes
                             </a>
 
-                            <a class="nav-link" href="../php/productos.php">
+                            <a class="nav-link" href="../vistas/modulos/productos.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-bag-shopping"></i></div>
                                 Productos
                             </a>
 
-                            <a class="nav-link" href="../php/compras.php">
+                            <a class="nav-link" href="../vistas/modulos/compras.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-bag-shopping"></i></div>
                                 Compras
                             </a>
 
-                            <a class="nav-link" href="../php/almacen.php">
+                            <a class="nav-link" href="../vistas/modulos/almacen.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-store"></i></div>
                                 Almacen
                             </a>                    
 
-                            <a class="nav-link" href="../php/ventas.php">
+                            <a class="nav-link" href="../vistas/modulos/ventas.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Ventas
                             </a>
