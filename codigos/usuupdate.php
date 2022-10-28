@@ -4,7 +4,6 @@ $id=$_POST['idusu'];
 $nombre=$_POST['nom'];
 $apellido=$_POST['ape'];
 $usuar=$_POST['usu'];
-$contra=$_POST['con'];
 $area=$_POST['are'];
 $estado=$_POST['est'];
 $cargo=$_POST['car'];
@@ -13,7 +12,7 @@ $consul1="SELECT * from usuario where idusu=$id";
 $resul1=mysqli_query($conexion,$consul1);
 $row1=mysqli_fetch_assoc($resul1);
 
-$consul="UPDATE usuario set nombre='$nombre',apellidos='$apellido',usuario='$usuar',contra='$contra',area='$area',
+$consul="UPDATE usuario set nombre='$nombre',apellidos='$apellido',usuario='$usuar',area='$area',
 estado='$estado',idcargo='$cargo' where idusu='$id'";
 $resul=mysqli_query($conexion,$consul);
 

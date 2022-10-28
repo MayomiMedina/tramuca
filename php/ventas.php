@@ -2,6 +2,7 @@
 <?php include("../Conexion/conexion.php") ?>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet" />
 
+
 <div class="container-md-6 mx-3 bg-white shadow border">
   <h2 class="text-center pt-2">VENTAS</h2>
   <div class="col-md-12">
@@ -13,19 +14,17 @@
         <div class="row">
 
           <div class="col-md-4 d-grid gap-1 pt-1">
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalalmacen"> Registrar ventas</button>
+            <button type="button" class="btn btn-danger" data-bs-toggle="modal" 
+            data-bs-target="#modalalmacen"> Registrar ventas</button>
 
           </div>
-
-          <div class="col-md-4 d-grid gap-1 pt-1">
-            <a class="btn btn-success" href="../Excel/excelventas.php"> Exportar XSV </a>
-          </div>
+       
 
           <div class="col-md-4 d-grid gap-1 pt-1">
             <a  class="btn btn-info" href="../pdf/ventaspdf.php"> Imprimir </a>
           </div>
           <p></p>
-          <table class="table table-striped table-bordered">
+          <table class="table table-striped">          
             <thead class="thead-dark">
               <tr class="table-bordered">
                 <th>Comprobante</th>
@@ -61,7 +60,8 @@
                   <td><?php echo $row['cantidad']; ?></td>
                   <td><?php echo $row['precio']; ?></td>
                   <td><?php echo $row['total']; ?></td>
-                  <td><button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#updateventas"
+                  <td><button type="button" title="editar" class="btn" data-bs-toggle="modal" 
+                  data-bs-target="#updateventas"
                     data-bs-id="<?php echo $row['id_boleta']; ?>"
                     data-bs-com="<?php echo $row['comprobante']; ?>"
                     data-bs-pro="<?php echo $row['producto']; ?>"
@@ -76,7 +76,8 @@
                       <i class="fas fa-edit fa-2x" style="color:tomato"></i>
 
                     </button>
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#eliminaralmacen"
+                    <button type="button" title="eliminar" class="btn" data-bs-toggle="modal" 
+                    data-bs-target="#eliminaralmacen"
                      data-bs-id="<?php echo $row['id_boleta']; ?>" 
                      data-bs-cod="<?php echo $row['producto']; ?>"
                      >
@@ -358,5 +359,7 @@
     </div>
   </div>
 </div>
+
+
 
 <?php include("../includes/footer.php"); ?>

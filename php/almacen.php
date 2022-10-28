@@ -18,9 +18,6 @@
 
                     </div>
 
-                    <div class="col-md-4 d-grid gap-1 pt-1">
-                        <a  class="btn btn-success" href="../Excel/excelalmacen.php"> Exportar XSV </a>
-                    </div>
 
                     <div class="col-md-4 d-grid gap-1 pt-1">
                     <a  class="btn btn-info" href="../pdf/almacen.php"> Imprimir </a>
@@ -40,7 +37,6 @@
                       </thead>
                       <tbody>
                       <?php 
-                         //echo mayomi editando
                         $consul="SELECT tb_almacen.id_almacen,
                         tb_almacen.id_producto,tb_almacen.fecha,tb_almacen.seccion,
                         tb_producto.producto,
@@ -245,7 +241,8 @@
             <?php 
               $consul="SELECT tb_compra.id_producto,tb_producto.producto 
               from tb_compra
-              inner join tb_producto on tb_compra.id_producto=tb_producto.id_producto";
+              inner join tb_producto on tb_compra.id_producto=tb_producto.id_producto
+              group by tb_producto.producto";
               $resul=mysqli_query($conexion,$consul);
               while($row=mysqli_fetch_assoc($resul)){
                 echo '<option value="'.$row['id_producto'].'">' .$row['producto']. '</option>';

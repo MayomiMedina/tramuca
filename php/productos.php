@@ -18,10 +18,7 @@
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalproducto"> Registrar Producto</button>
 
                     </div>
-
-                    <div class="col-md-4 d-grid gap-1 pt-1">
-                        <a  class="btn btn-success" href="../Excel/excelproducto.php"> Exportar XSV </a>
-                    </div>
+             
 
                     <div class="col-md-4 d-grid gap-1 pt-1">
                         <span class="btn btn-info " onclick="window.print()"> Imprimir</span>

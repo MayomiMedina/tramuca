@@ -5,7 +5,7 @@ $codigo=$_POST['cod'];
 $cate=$_POST['cat'];
 $marca=$_POST['mar'];
 
-$consul="insert INTO tb_producto (producto,codigo,stock,categoria,marca)
+$consul="insert INTO tb_producto (producto,codigo,categoria,marca)
 values('$nombre','$codigo','$cate','$marca') ";
 
 

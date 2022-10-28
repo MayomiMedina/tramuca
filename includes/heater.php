@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Calidad</title>
+        <title>Evov</title>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -25,6 +25,8 @@
         <!-- date-->
        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+       <script src="https://code.highcharts.com/highcharts.js"></script>
 
 
        <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
@@ -32,9 +34,16 @@
 
     </head>
     <body class="sb-nav-fixed">
+
+    <script src="../build/code/highcharts.js"></script>
+    <script src="../build/code/modules/series-label.js"></script>
+    <script src="../build/code/modules/exporting.js"></script>
+    <script src="../build/code/modules/export-data.js"></script>
+    <script src="../build/code/modules/accessibility.js"></script>
+
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="../php/index.php">TRAMUCA</a>
+            <a class="navbar-brand ps-3" href="../codigos/graficos.php">TRAMUCA</a>
             <!--<input type="submit" id="btninventario" class="navbar-brand ps-3" value="Inventario" style="color:dimgray">-->
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
@@ -50,7 +59,7 @@
                         
                         <li><a class="dropdown-item" href="#!">Detalles</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="../php/login.php">Cerrar sesión</a></li>
+                        <li><a class="dropdown-item" href="../php/index.php">Cerrar sesión</a></li>
                     </ul>
                 </li>
             </ul>
@@ -74,17 +83,14 @@
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-bag-shopping"></i></div>
                                 Productos
                             </a>
-
+                            <a class="nav-link" href="../php/almacen.php">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+                                Almacen
+                            </a>  
                             <a class="nav-link" href="../php/compras.php">
                                 <div class="sb-nav-link-icon"><i class="fa-solid fa-bag-shopping"></i></div>
                                 Compras
-                            </a>
-
-                            <a class="nav-link" href="../php/almacen.php">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-store"></i></div>
-                                Almacen
-                            </a>                    
-
+                            </a>                                           
                             <a class="nav-link" href="../php/ventas.php">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Ventas

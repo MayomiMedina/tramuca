@@ -19,9 +19,7 @@
 
                     </div>
 
-                    <div class="col-md-4 d-grid gap-1 pt-1">
-                        <a  class="btn btn-success" href="../Excel/excelcompras.php"> Exportar XSV </a>
-                    </div>
+             
 
                     <div class="col-md-4 d-grid gap-1 pt-1">
                         <a  class="btn btn-info" href="../pdf/compraspdf.php"> Imprimir </a>
@@ -359,32 +357,6 @@
   </div>
 </div>
 
-
-
-<script>
-  $(document).ready(function(){
-    $('#excelcom').DataTable({
-      dom:"Bfrtip",
-      buttons:{
-        dom:{
-          button:{
-            className:'btn'
-          }
-        },
-        buttons:[
-          {
-            extend:"excelcom",
-            text:'Exportar a Excel',
-            className: 'btn btn-outline-success',
-            excelStyles:{
-              template:'header_clue'
-            }
-          }
-        ]
-      }
-    });
-  });
-</script>
 
 
 <?php include ("../includes/footer.php");?>
