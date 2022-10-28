@@ -19,7 +19,7 @@
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalusuar"><b> Registrar Usuario</b></button>
                     
                   
-                        <a class="btn btn-success" href="../php/login.php" ><b>Regresar</b></a> 
+                        <a class="btn btn-success" href="../php/index.php" ><b>Regresar</b></a> 
                     </div>
             <p></p>
             <table class="table table-striped table-bordered">
@@ -29,7 +29,6 @@
                         <th>Nombres</th>
                         <th>Apellidos</th>
                         <th>Usuario</th>
-                        <th>Contraseña</th>
                         <th>Área</th>
                         <th>Estado</th>
                         <th>Cargo</th>    
@@ -50,7 +49,6 @@
                             <td><?php echo $row['nombre'];?></td>
                             <td><?php echo $row['apellidos'];?></td>
                             <td><?php echo $row['usuario'];?></td>
-                            <td><?php echo $row['contra'];?></td>
                             <td><?php echo $row['area'];?></td>
                             <td><?php echo $row['estado'];?></td>
                             <td><?php echo $row['cargo'];?></td>
@@ -60,7 +58,6 @@
                                  data-bs-nom="<?php echo $row['nombre'];?>"
                                  data-bs-ape="<?php echo $row['apellidos'];?>"
                                  data-bs-usu="<?php echo $row['usuario'];?>"
-                                 data-bs-con="<?php echo $row['contra'];?>"
                                  data-bs-are="<?php echo $row['area'];?>"
                                  data-bs-est="<?php echo $row['estado'];?>"
                                  data-bs-car="<?php echo $row['cargo'];?>"
@@ -138,12 +135,7 @@
           <div class="col-xs-6 col-sm-3 col-md-6 form-group">
             <label for="recipient-name" class="col-form-label">Usuario:</label>
             <input type="text" class="form-control" id="usu" name="usu">
-          </div>
-      
-          <div class="col-xs-6 col-sm-3 col-md-6 form-group">
-            <label for="recipient-name" class="col-form-label">Contraseña:</label>
-            <input type="text" class="form-control" id="con" name="con">
-          </div>
+          </div>            
         </div>
                 
         <div class="row">
@@ -195,7 +187,6 @@
       var nom = button.getAttribute('data-bs-nom')
       var ape = button.getAttribute('data-bs-ape')
       var usu = button.getAttribute('data-bs-usu')
-      var con = button.getAttribute('data-bs-con')
       var are = button.getAttribute('data-bs-are')
       var est = button.getAttribute('data-bs-est')
       var car = button.getAttribute('data-bs-car')
@@ -206,7 +197,6 @@
       var codigo = exampleModal.querySelector('#nom')
       var nume = exampleModal.querySelector('#ape')
       var fecha = exampleModal.querySelector('#usu')
-      var cant = exampleModal.querySelector('#con')
       var prec = exampleModal.querySelector('#are')
       var total = exampleModal.querySelector('#est')
       var carg = exampleModal.querySelector('#car')
@@ -217,7 +207,6 @@
       codigo.value=nom;
       nume.value=ape;
       fecha.value=usu;
-      cant.value=con;
       prec.value=are;
       total.value=est;
       carg.value=car;
