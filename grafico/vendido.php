@@ -148,7 +148,7 @@ require_once("../Conexion/conexion.php")
 
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="../codigos/graficos.php" >Productos Comprados</a>
+                                <a class="nav-link" href="../codigos/graficos.php" >Productos Comprados</a>
                                     <a class="nav-link" href="../grafico/vendido.php"> Productos Vendidos</a>
                                 </nav>
                             </div>
@@ -197,7 +197,7 @@ require_once("../Conexion/conexion.php")
                     },
                     title: {
                         align: 'left',
-                        text: 'Los productos mas comprados'
+                        text: 'Los productos mas vendidos'
                     },
 
                     subtitle: {
@@ -217,11 +217,11 @@ require_once("../Conexion/conexion.php")
                     xAxis: {
                         categories: [
                             <?php
-                            $consul = "SELECT tb_producto.producto,SUM(tb_compra.cantidad) as  suma
-            FROM `tb_compra` 
-            INNER join tb_producto on tb_compra.id_producto=tb_producto.id_producto
-            group by tb_producto.producto 
-            order by tb_producto.producto DESC";
+                            $consul = "SELECT tb_producto.producto,SUM(tb_boleta.cantidad) as  suma
+                            FROM `tb_boleta` 
+                            INNER join tb_producto on tb_boleta.id_producto=tb_producto.id_producto
+                            group by tb_producto.producto 
+                            order by tb_producto.producto DESC";
                             $resul = mysqli_query($conexion, $consul);
                             while ($row = mysqli_fetch_assoc($resul)) {
                             ?> '<?php echo $row["producto"] ?>',
@@ -249,11 +249,11 @@ require_once("../Conexion/conexion.php")
                         name: 'productos',
                         data: [
                             <?php
-                            $consul = "SELECT tb_producto.producto,SUM(tb_compra.cantidad) as  suma
-            FROM `tb_compra` 
-            INNER join tb_producto on tb_compra.id_producto=tb_producto.id_producto
-            group by tb_producto.producto 
-            order by tb_producto.producto DESC";
+                            $consul = "SELECT tb_producto.producto,SUM(tb_boleta.cantidad) as  suma
+                            FROM `tb_boleta` 
+                            INNER join tb_producto on tb_boleta.id_producto=tb_producto.id_producto
+                            group by tb_producto.producto 
+                            order by tb_producto.producto DESC";
                             $resul = mysqli_query($conexion, $consul);
                             while ($row = mysqli_fetch_assoc($resul)) {
                             ?>

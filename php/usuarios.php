@@ -21,7 +21,7 @@
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalusuar"><b> Registrar Usuario</b></button>
                     
                   
-                        <a class="btn btn-success" href="../php/index.php" ><b>Regresar</b></a> 
+                        <a class="btn btn-success" href="../index.html" ><b>Regresar</b></a> 
                     </div>
             <p></p>
             <table class="table table-striped table-bordered">

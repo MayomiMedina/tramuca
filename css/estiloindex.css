@@ -5,9 +5,7 @@ html,body{
 a,button{
     cursor:pointer;    
 }
-@keyframes pan{
-    100%{background-position: 15% 50%;}
-}
+
 body{
     display:grid;
     place-items: center;
@@ -15,9 +13,8 @@ body{
     padding: 0 24px;
     background-image: url('../img/fondo_login.png'); 
     background-repeat: no-repeat;
-    background-size: cover;
-    animation:
-    pan 6s infinite alternate linear;
+    background-size: cover;    
+    
 }
 @media (width>=500px){
     body{

@@ -14,9 +14,7 @@ $resul=mysqli_query($conexion,$consul);
 $row = mysqli_fetch_array($resul);
 
 if(!$user || !$contra){
-    ?>
-    <?php     
-    include("index.php");
+    header("Location: ../index.html");    
     ?>
    <div class="alert alert-warning" style="width: 100%;" role="alert">
     <p class="text-center">
@@ -31,13 +29,11 @@ else if($row ){
     header("Location:../codigos/graficos.php");
     }
     else{   
-        header("Location:../php/index.php");    
+        header("Location: ../index.html");  
     }
 }else{
-    $con=$con-1;
-    ?>
-    <?php     
-    include("index.php");
+    $con=$con-1;     
+    header("Location: ../index.html"); 
     ?>
    <div class="alert alert-danger" style="width: 100%;" role="alert">
     <p class="text-center">
