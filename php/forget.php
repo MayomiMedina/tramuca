@@ -21,29 +21,34 @@
         <link href="../build/bootstrap5/css/styles.css" rel="stylesheet" />
         <link href="../build/bootstrap5/css/bootstrap.css" rel="stylesheet" />    
     <link rel="stylesheet" href="../php/estilo.css">
-
+    <link href="../css/estilos.css" rel="stylesheet" type="text/css">
     </head>
     <body>
 
     <div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh">
-        <form style="background-color:azure" class="border shadow p-5 rounded-2" style="width: 500px;" 
+        <form style="background-color:white" class="border shadow p-5 rounded-2" style="width: 500px;" 
         action="../codigos/recuperar.php" method="post">
             
             <h2 class="text-center pt-2">NUEVA CONTRASEÑA</h2>
             <hr>
-            <div class="mb-3">
-                <label for="usuar" class="form-label"><b>Ingrese su usuario:</b></label>
+            <br>
+            <div class="input">
+               
                 <input type="text" class="form-control" id="usuario" placeholder="Ingresar usuario" name="usuario">
             </div>
-            <div class="mb-3">
-                <label for="contra" class="form-label"><b>Ingrese nueva contraseña:</b></label>
+            <br>
+            <div class="input">
+                
                 <input type="password" class="form-control" id="contrase" placeholder="Ingresar contraseña" name="contrase">
             </div>
-            <div class="mb-3">
-                <label for="contra" class="form-label"><b>Repita la contraseña:</b></label>
+            <br>
+            <div class="input">
+                
                 <input type="password" class="form-control" id="contrase2" placeholder="Ingresar contraseña" name="contrase2">
             </div>
+            <br>
             <button type="submit" class="btn btn-primary"><b>Recuperar</b></button>      
+            
             <a class="btn btn-success" href="../php/index.php" ><b>Regresar</b></a>     
         </form>
         

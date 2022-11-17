@@ -32,8 +32,22 @@
        <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
 <script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
 
+<style>
+
+body{
+    display:grid;
+    place-items: center;
+    margin: 0;
+    padding: 0 24px;
+    background-image: url('../img/fondo_login.png'); 
+    background-repeat: no-repeat;
+    background-size: cover;    
+    
+}
+</style>
     </head>
     <body class="sb-nav-fixed">
+
 
     <script src="../build/code/highcharts.js"></script>
     <script src="../build/code/modules/series-label.js"></script>

@@ -2,7 +2,7 @@
 <?php include("../Conexion/conexion.php")?>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet" />
 
-
+<link rel="stylesheet" href="../css/estilomodals.css">
 
 <div class="container-md-6 mx-3 bg-white shadow border">
     <h2 class="text-center pt-2">Lista de clientes</h2>
@@ -16,9 +16,13 @@
                 <div class="row">
 
                     <div class="mb-3 col-md-2 d-grid gap-1 pt-1">
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalcliente"><b>Registrar Cliente</b></button>
+                        <button type="button" onclick="toggleModal()" data-bs-toggle="modal" data-bs-target="#modalcliente"><b>Registrar Cliente</b></button>
                     </div>
-
+                    <div
+                      class="modal-background"
+                      onclick="toggleModal()"
+                      >
+                    </div>
                     <div class="mb-3 col-md-2 d-grid gap-1 pt-1">
                         <span class="btn btn-info " onclick="window.print()"><b>Imprimir</b></span>
                     </div>
@@ -122,7 +126,7 @@
 </div>
 
 
-<div class="modal fade" id="modalclienteupdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal" id="modalclienteupdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -261,5 +265,9 @@
     </div>
   </div>
 </div>
+
+<script>
+
+  
 
 <?php include ("../includes/footer.php");?>
