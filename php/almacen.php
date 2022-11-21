@@ -23,13 +23,12 @@
                     <a  class="btn btn-info" href="../pdf/almacen.php"> Imprimir </a>
                     </div>
                     <p></p>                  
-                    <table class="table table-striped table-bordered">
+                    <table class="table table-striped table-bordered" id="tablapro">
                       <thead class="thead-dark">
                       <tr class="table-bordered">                        
                         <th>Fecha</th>
                         <th>Seccion</th>
                         <th>Producto</th>
-                        <th>Codigo</th>
                         <th>Stock</th>
                         <th>Categoria</th>
                         <th>Marca</th>
@@ -50,8 +49,7 @@
                         <tr>                            
                             <td><?php echo $row['fecha'];?></td>
                             <td><?php echo $row['seccion'];?></td>
-                            <td><?php echo $row['producto'];?></td>  
-                            <td><?php echo $row['codigo'];?></td>
+                            <td><?php echo $row['producto'];?></td>                           
                             <td><?php echo $row['stock'];?></td>
                             <td><?php echo $row['categoria'];?></td>
                             <td><?php echo $row['marca'];?></td>
@@ -86,6 +84,10 @@
 
     </div>    
 </div>
+<script>
+var tabla=document.querySelector("#tablapro");
+var datatable=new DataTable(tabla);
+</script>
 
 <div class="modal fade" id="eliminaralmacen" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -120,7 +122,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">REGISTRAR</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Actualizar</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -149,7 +151,8 @@
             <?php 
               $consul="SELECT tb_compra.id_producto,tb_producto.producto 
               from tb_compra
-              inner join tb_producto on tb_compra.id_producto=tb_producto.id_producto";
+              inner join tb_producto on tb_compra.id_producto=tb_producto.id_producto
+              group by tb_producto.producto";
               $resul=mysqli_query($conexion,$consul);
               while($row=mysqli_fetch_assoc($resul)){
                 echo '<option value="'.$row['id_producto'].'">' .$row['producto']. '</option>';

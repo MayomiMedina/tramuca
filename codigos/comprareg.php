@@ -1,7 +1,6 @@
 <?php include("../Conexion/conexion.php");
 
 $nombre=$_POST['Nom'];//tb_producto
-$codigo=$_POST['cod'];//tb_producto
 $nume=$_POST['num'];//tb_compra
 $cantidad=$_POST['can'];//tb_detalle_compra
 $peu=$_POST['peu'];//tb_detalle_compra

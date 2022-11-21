@@ -24,7 +24,7 @@
             <a  class="btn btn-info" href="../pdf/ventaspdf.php"> Imprimir </a>
           </div>
           <p></p>
-          <table class="table table-striped">          
+          <table class="table table-striped" id="tablapro">          
             <thead class="thead-dark">
               <tr class="table-bordered">
                 <th>Comprobante</th>
@@ -99,6 +99,11 @@
 
 </div>
 </div>
+<script>
+var tabla=document.querySelector("#tablapro");
+var datatable=new DataTable(tabla);
+</script>
+
 
 <div class="modal fade" id="eliminaralmacen" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">

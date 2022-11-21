@@ -2,7 +2,7 @@
 <?php include("../Conexion/conexion.php")?>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/css/bootstrap-datepicker.css" rel="stylesheet" />
 
-<link rel="stylesheet" href="../css/estilomodals.css">
+
 
 <div class="container-md-6 mx-3 bg-white shadow border">
     <h2 class="text-center pt-2">Lista de clientes</h2>
@@ -16,35 +16,16 @@
                 <div class="row">
 
                     <div class="mb-3 col-md-2 d-grid gap-1 pt-1">
-                        <button type="button" onclick="toggleModal()" data-bs-toggle="modal" data-bs-target="#modalcliente"><b>Registrar Cliente</b></button>
+                        <button type="button" class="btn btn-danger"data-bs-toggle="modal" data-bs-target="#modalcliente"><b>Registrar Cliente</b></button>
                     </div>
-                    <div
-                      class="modal-background"
-                      onclick="toggleModal()"
-                      >
-                    </div>
+
                     <div class="mb-3 col-md-2 d-grid gap-1 pt-1">
                         <span class="btn btn-info " onclick="window.print()"><b>Imprimir</b></span>
                     </div>
                         
-                    <div class="mb-3 col-md-2">
-                    </div>
-                    <div class="mb-3 col-md-2">
-                    </div>
-                    <div class="mb-3 col-md-2 d-grid gap-1 pt-1" data-a-target="tray-search-input">
-
-                    <form  action="../buscar/buscar_cliente.php" class="btn_new" class="form_search">
-                    <input type="number" class="d-flex p-2 form-control" name="busqueda" id="busqueda" required="Ingrese un DNI" pattern="[0-9]{8}"  placeholder="DNI" >
-                    
-                    </div>
-                    <div class="mb-3 col-md-2 d-grid gap-1 pt-1">                    
-                    <input type="submit" value="Buscar cliente" class="btn btn-outline-success btn_search" >                    
-                    </div>
-                    </form>
-                    
-                    <hr> 
+              <hr>
                     <p></p>
-                    <table class="table table-striped table-bordered">
+                    <table class="table table-striped table-bordered" id="tablapro">
                       <thead class="thead-dark">
                       <tr class="table-bordered">                                                
                         <th>Nombre</th>
@@ -102,6 +83,10 @@
     </div>    
 </div>
 
+<script>
+var tabla=document.querySelector("#tablapro");
+var datatable=new DataTable(tabla);
+</script>
 
 <div class="modal fade" id="eliminarclientes" tabindex="-1" aria-labelledby="exampleModalLabelUp" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -266,7 +251,6 @@
   </div>
 </div>
 
-<script>
 
   
 

@@ -1,12 +1,11 @@
 <?php include("../Conexion/conexion.php");
 
 $nombre=$_POST['nomb'];
-$codigo=$_POST['cod'];
 $cate=$_POST['cat'];
 $marca=$_POST['mar'];
 
-$consul="insert INTO tb_producto (producto,codigo,categoria,marca)
-values('$nombre','$codigo','$cate','$marca') ";
+$consul="insert INTO tb_producto (producto,categoria,marca)
+values('$nombre','$cate','$marca') ";
 
 
 $resul=mysqli_query($conexion,$consul);

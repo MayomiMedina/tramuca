@@ -25,10 +25,9 @@
                         <a  class="btn btn-info" href="../pdf/compraspdf.php"> Imprimir </a>
                     </div>
                     <p></p>
-                    <table  class="table table-striped" >
+                    <table  class="table table-striped" id="tablapro">
                       <thead class="thead-dark">
                       <tr class="table-bordered">                        
-                        <th>Código</th>
                         <th>Nombre del producto</th>
                         <th>Num_comprobante</th>
                         <th>Cliente </th>
@@ -49,8 +48,7 @@
                         $resul=mysqli_query($conexion,$consul);
                         while($row=mysqli_fetch_assoc($resul)){
                         ?>
-                        <tr>
-                            <td><?php echo $row['codigo'];?></td>
+                        <tr>                           
                             <td><?php echo $row['producto'];?></td>
                             <td><?php echo $row['numcomproban'];?></td> 
                             <td><?php echo $row['nombre'];?></td>
@@ -95,6 +93,10 @@
 
     </div>    
 </div>
+<script>
+var tabla=document.querySelector("#tablapro");
+var datatable=new DataTable(tabla);
+</script>
 
 
 <div class="modal fade" id="eliminar" tabindex="-1" aria-labelledby="exampleModalLabelUp" aria-hidden="true">
@@ -131,10 +133,6 @@
           
             <input type="hidden" class="form-control" id="idcompra" name="idcompra">
         <div class="row">            
-          <div class="col-xs-6 col-sm-3 col-md-6 form-group">
-            <label for="recipient-name" class="col-form-label">Codigo:</label>
-            <input type="text" class="form-control" id="cod" name="cod" autocomplete="off">
-          </div>
           <div class="col-xs-6 col-sm-3 col-md-6 form-group">
             <label for="recipient-name" class="col-form-label">Nombre del producto:</label>
             <select class="form-select" id="Nom" name="Nom" required="" autocomplete="off">
@@ -280,10 +278,6 @@
       <div class="modal-body">
         <form method="POST" action="../codigos/comprareg.php">
         <div class="row">
-          <div class="col-xs-6 col-sm-3 col-md-6 form-group">
-            <label for="recipient-name" class="col-form-label">Código:</label>
-            <input type="text" class="form-control" id="cod" name="cod" required autocomplete="off">
-          </div>
           <div class="col-xs-6 col-sm-3 col-md-6 form-group">
             <label for="recipient-name" class="col-form-label">Nombre del producto:</label>
             <select class="form-select" id="Nom" name="Nom" require>

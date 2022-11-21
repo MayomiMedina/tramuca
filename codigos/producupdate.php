@@ -2,12 +2,11 @@
 
 $id=$_POST['idproducto'];
 $nombre=$_POST['NomU'];
-$codigo=$_POST['cod'];
 $categoria=$_POST['cat'];
 $marca=$_POST['mar'];
 
 
-$consul="UPDATE tb_producto set producto='$nombre',codigo='$codigo' ,categoria='$categoria',marca='$marca'
+$consul="UPDATE tb_producto set producto='$nombre' ,categoria='$categoria',marca='$marca'
  where id_producto='$id' ";
 
 $resul=mysqli_query($conexion,$consul);

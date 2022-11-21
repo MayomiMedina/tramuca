@@ -2,7 +2,6 @@
 
 $id=$_POST['idcompra'];//tb_compra
 $nombre=$_POST['Nom'];
-$codigo=$_POST['cod'];
 $cliente=$_POST['cli'];
 $numero=$_POST['num'];//tb_compra
 $fecha=$_POST['fec'];
@@ -17,7 +16,7 @@ $row = mysqli_fetch_array($resul);
 
 $r=$row['stock']+$cantidad;
 
-$consul2="UPDATE tb_producto set codigo='$codigo' ,stock='$r' where id_producto='$nombre'";
+$consul2="UPDATE tb_producto set stock='$r' where id_producto='$nombre'";
 
 $consul3="UPDATE tb_compra set id_cliente='$cliente',id_producto='$nombre',numcomproban='$numero',
 fecha='$fecha',cantidad='$cantidad',

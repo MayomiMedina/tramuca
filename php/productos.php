@@ -40,7 +40,6 @@
                       <thead class="thead-dark">
                       <tr class="table-bordered">                        
                         <th>Producto</th>
-                        <th>Codigo</th>
                         <th>Categoria</th>
                         <th>Marca</th>                        
 
@@ -48,7 +47,7 @@
                       </thead>
                       <tbody>
                       <?php 
-                        $consul="select 
+                        $consul="SELECT 
                         tb_producto.id_producto,
                         tb_producto.producto,
                           tb_producto.codigo,
@@ -62,7 +61,6 @@
                         ?>
                         <tr>
                             <td><?php echo $row['producto'];?></td>
-                            <td><?php echo $row['codigo'];?></td>
                             <td><?php echo $row['categoria'];?></td>
                             <td><?php echo $row['marca'];?></td>                          
                            
@@ -149,10 +147,7 @@ var datatable=new DataTable(tabla);
               <label for="recipient-name" class="col-form-label">Nombre del producto:</label>
               <input type="text" class="form-control" id="NomU" name="NomU" >
             </div>
-            <div class="col-xs-6 col-sm-3 col-md-3 form-group">
-              <label for="recipient-name" class="col-form-label">Código:</label>
-              <input type="text" class="form-control" id="cod" name="cod">
-            </div>                      
+                     
           </div>
 
           <div class="row">
@@ -239,10 +234,7 @@ var datatable=new DataTable(tabla);
       <div class="modal-body">
         <form method="POST" action="../codigos/producreg.php">
         <div class="row">
-          <div class="mb-3 col-xs-6 col-sm-3 col-md-6 form-group">
-            <label for="recipient-name" class="col-form-label">Código:</label>
-            <input type="text" class="form-control" id="cod" name="cod">
-          </div>
+         
           <div class="mb-3 col-xs-6 col-sm-3 col-md-6 form-group">
             <label for="recipient-name" class="col-form-label">Nombre del producto:</label>
             <input type="text" class="form-control" id="nomb" name="nomb">
@@ -252,7 +244,7 @@ var datatable=new DataTable(tabla);
           <div class="mb-3 col-xs-6 col-sm-3 col-md-6 form-group">
             <label for="recipient-name" class="col-form-label">Categoría:</label>
             <input type="text" class="form-control" id="cat" name="cat">
-          </div>
+          
         </div>
           <div class="mb-3 col-xs-6 col-sm-3 col-md-6 form-group">
             <label for="recipient-name" class="col-form-label">Marca:</label>
